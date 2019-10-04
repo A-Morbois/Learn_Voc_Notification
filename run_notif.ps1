@@ -1,5 +1,4 @@
-
-$loc = "C:\Users\morboa-ext\Desktop\Perso\Dev\Learn_Voc_Notification\"
+#https://github.com/Windos/BurntToast/blob/master/Help/New-BurntToastNotification.md
 
 
 $current_location =  Split-Path "$($script:MyInvocation.MyCommand.Path)"
@@ -15,14 +14,14 @@ Install-Module BurntToast -Scope CurrentUser
 #$_Rest = 1
 #$_Duration = 240
 
-$myQuotes = @()
+$myWords = @()
 
 foreach($p in $(Get-ChildItem -Path "$current_location\$VocPath\*.txt" -Recurse -file))
 {
     #Write-Host $(get-content $p)
     foreach ($l  in $(get-content $p))
     {
-        $myQuotes += $l
+        $myWords += $l
         #Write-Host $l
     }
 }
@@ -30,18 +29,19 @@ foreach($p in $(Get-ChildItem -Path "$current_location\$VocPath\*.txt" -Recurse 
 
 Do
 {
-    $rnd = Get-Random -Maximum $myQuotes.count
+    $rnd = Get-Random -Maximum $myWords.count
 
-    $quote = $myQuotes[$rnd]
-    $word_to_learn = $myQuotes[$rnd].Split(";")[0]
-    $translation = $myQuotes[$rnd].Split(";")[1]
+    $quote = $myWords[$rnd]
+    $word_to_learn = $myWords[$rnd].Split(";")[0]
+    $translation = $myWords[$rnd].Split(";")[1]
 
     $img =   "$current_location\Images\$translation.png"
-    write-host $img
 
     write-host "$word_to_learn : $translation "
 
-    New-BurntToastNotification  -AppLogo "$img"  -Text "$word_to_learn" , "$translation"
+    #$BlogButton = New-BTButton -Content 'Listen to it'  -Arguments 'https://king.geek.nz'
+    $ToastHeader = New-BTHeader -Id '001' -Title $word_to_learn
+    New-BurntToastNotification -Sound Default  -AppLogo "$img"  -Text "$translation", "$(Get-Date -format HH:mm)" <#-Button $BlogButton#> -Header $ToastHeader
 
     [Int] $sleeping_Time = $Rest*60
 
