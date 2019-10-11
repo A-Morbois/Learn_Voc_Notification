@@ -1,0 +1,29 @@
+衣服;vêtements;Yīfú
+穿;porter des vêtements;Chuān
+些;peu;Xiē
+钱;argent;Qián
+件;classificateur vêtements;Jiàn
+条;classificateur objet long;Tiáo
+百;cent;Bǎi
+快;monnaie;Kuài
+校;école;Xiào
+贵;cher;Guì
+而且;et/en outre;Érqiě
+认;reconnaitre;Rèn
+应该;devoir;Yīnggāi
+父;père;Fù
+母;mère;Mǔ
+部;une partie de;Bù
+生活;vivre;Shēnghuó 
+运动;mouvement;Yùndòng
+花;V : dépenser / N: Fleur;Huā
+借给;emprunter;Jiè gěi
+手表;une montre;Shǒubiǎo
+饮料;une boisson;Yǐnliào
+零用钱;Argent de poche;Língyòng qián
+考试;passer un examen;Kǎoshì
+坏;mauvais / pourri;Huài
+破;cassé;Pò
+够;Assez, suffisant;Gòu
+对不是;désolé;Duì bùshì
+没关系;de rien, ça n'a pas d'importance;Méiguānxì

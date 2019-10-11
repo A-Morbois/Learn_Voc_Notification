@@ -2,7 +2,7 @@
 <toast scenario="$Scenario">
     <visual>
     <binding template="ToastGeneric">
-        <image placement="hero" src="$HeroImage"/>
+        <image placement="hero" src="$(Invoke-RestMethod -Method GET -Uri https://source.unsplash.com/random)"/>
         <image id="1" placement="appLogoOverride" hint-crop="circle" src="$LogoImage"/>
         <text placement="attribution">Tadam</text>
         <text>"HEader"</text>

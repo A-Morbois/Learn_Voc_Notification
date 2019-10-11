@@ -1,0 +1,127 @@
+爱;aimer
+八;huit
+爸爸;papa
+北京;pekin
+杯子;tasse
+本;classificateur livre
+不;negation
+菜;plat
+茶;thé
+吃;manger
+大;grand
+打电话;passer un coup de fil
+的;possession
+点;heure
+电脑;informatique
+电影;film
+东西;chose
+都;tous
+对不起;désolé
+多;plus
+多少;combien
+二;deux
+儿子;fils
+飞机;avion
+高兴;content
+个;classificateur
+工作;travail
+狗;chien
+汉语;grammaire
+好;bien
+喝;boire
+和;et
+很;très
+回;revenir
+会;savoir, pouvoir
+几;combien
+家;maison,famille
+叫; s'appeler
+今天;cette année
+九;neuf
+开;ouvrir
+看;voir
+看见;apercevoir
+块;morceau, monnaie
+来;venir
+老师;prof
+了;particule finale 
+冷;froid
+里;interieur
+六;six
+吗;particule question
+买;acheter
+妈妈;maman
+猫;chat
+米饭;riz
+明天;demain
+名字;prenom
+哪儿;ou
+呢; pour affirmer un fait
+能;pouvoir
+你;tu
+年;année
+女儿;fille
+朋友;ami
+苹果;pomme
+七;sept
+钱;argent
+前面;devant
+请;s'il vous plaît
+去;aller
+人;personne
+认识;connaissance
+三;trois
+上午;matin
+什么;quoi
+十;dix
+是;etre
+时候;moment
+书;livre
+谁;qui
+水;eau
+说;parler
+四;quatre
+岁;ans
+他;il
+她;elle
+太;trop
+天气;temps
+听;écouter
+同学;camarade
+我;je
+我们;nous
+五;cinq
+下;sous
+下雨;pleuvoir
+想;vouloir
+小;petit
+小姐;mademoiselle
+下午;après midi
+写;écrire
+些;dès
+谢谢;merci
+喜欢;apprécier
+星期;semaine
+学生;eleve
+学习;etudier
+学校;ecole
+一;un
+一点儿;un peu 
+衣服;vetement
+医生;medecin
+医院;hopital
+椅子;chaise
+有;avoir
+月;lune
+在;etre à
+再见;au revoir
+怎么;comment?
+怎么样;comment
+这;ce
+中国;chine
+中午;midi
+住;habiter
+坐;prendre moyen de transport/ s'asseoir
+做;faire / fabriquer
+昨天;hier
+

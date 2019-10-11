@@ -1,6 +1,6 @@
 
 ## Time between each notification
-$Rest = 10
+$Rest = 5
 
 ## global duration of the program
 $Duration = 240
