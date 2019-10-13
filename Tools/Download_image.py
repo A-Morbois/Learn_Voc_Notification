@@ -30,7 +30,7 @@ driver =  webdriver.Firefox(profile)
 driver.get('https://google.com/')
 
 #Foreach line containing some vocabulary
-with io.open("./vocabulary/voc.txt", encoding ="utf-8") as f:
+with io.open("07-10-19.txt", encoding ="utf-8") as f:
     for line in f:
         words = line.split(";")
         print " Processing word : " + words[0]
