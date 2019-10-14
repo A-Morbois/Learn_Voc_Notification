@@ -5,9 +5,10 @@ import time
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 import codecs
 import io
+import urllib
 
 
-OutPath = "/home/antoine//Bureau/Learn_Voc_Notification/Sound"
+OutPath = "/home/antoine/Bureau/Learn_Voc_Notification/Sound"
 profile = webdriver.FirefoxProfile()
 
 #Force the download without having the pop up
@@ -23,28 +24,45 @@ options.add_argument("--test-type")
 options.binary_location = "/usr/bin/firefox"
 binary = FirefoxBinary('/usr/bin/firefox')
 
-#Open the browser
-# driver doc : https://www.seleniumhq.org/docs/03_webdriver.jsp
 driver =  webdriver.Firefox(profile)
-driver.get('https://soundoftext.com/')
+driver.get('https://google.com/')
 
 #Foreach line containing some vocabulary
-with io.open("07-10-19.txt", encoding ="utf-8") as f:
+with io.open("30_Step.txt", encoding ="utf-8") as f:
     for line in f:
         words = line.split(";")
+
+        ## Images
         print " Processing word : " + words[0]
+        url = 'https://pixabay.com/zh/'
+        driver.get(url)
+
+        # Go in Sound Of Text to download the sound
+        text_area = driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div[3]/form/div/span/input')
+        query = words[0]
+        text_area.send_keys(query)
+        #text_area.sendKeys(Keys.RETURN)
+
+        search = driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div[3]/form/div/input')
+        search.click()
+
+        img = driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[2]/div[2]/div/div[2]/div[1]/a/img')
+        src = img.get_attribute('src')
+        urllib.urlretrieve(src,words[0] +".jpg")
+
+        time.sleep(2)
+
+        ## Sound
         driver.get('https://soundoftext.com/')
 
         # Go in Sound Of Text to download the sound
         text_area = driver.find_element_by_name('text')
-        query = words[0]
         text_area.send_keys(query)
 
         voice = driver.find_element_by_xpath('/html/body/div[1]/div/main/section[1]/div[1]/div/form/div[2]/select')
         voice.click()
         voice.send_keys("Cc") # Chinese in the list
         voice.click()
-
 
         submit_button = driver.find_element_by_xpath('/html/body/div[1]/div/main/section[1]/div[1]/div/form/div[3]/input')
         submit_button.click()
@@ -54,4 +72,4 @@ with io.open("07-10-19.txt", encoding ="utf-8") as f:
         download = driver.find_element_by_xpath('/html/body/div[1]/div/main/section[1]/div[2]/div/div/div[2]/a[2]')
         download.click()
 
-        time.sleep(5)
+        time.sleep(2)
